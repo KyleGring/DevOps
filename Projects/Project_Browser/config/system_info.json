@@ -1,0 +1,164 @@
+﻿{
+    "Network":  {
+                    "ConnectionType":  1,
+                    "Adapters":  {
+                                     "Name":  "Wi-Fi",
+                                     "InterfaceDescription":  "Intel(R) Wireless-AC 9560 160MHz",
+                                     "LinkSpeed":  "866.7 Mbps"
+                                 }
+                },
+    "Security":  {
+                     "ExecutionPolicy":  4,
+                     "FirewallStatus":  [
+                                            {
+                                                "Name":  "Domain",
+                                                "Enabled":  1
+                                            },
+                                            {
+                                                "Name":  "Private",
+                                                "Enabled":  0
+                                            },
+                                            {
+                                                "Name":  "Public",
+                                                "Enabled":  1
+                                            }
+                                        ],
+                     "AntiVirusProduct":  {
+                                              "CimClass":  {
+                                                               "CimSuperClassName":  null,
+                                                               "CimSuperClass":  null,
+                                                               "CimClassProperties":  [
+                                                                                          {
+                                                                                              "Name":  "displayName",
+                                                                                              "Value":  null,
+                                                                                              "CimType":  14,
+                                                                                              "Flags":  "Property, NullValue",
+                                                                                              "Qualifiers":  "Not_Null = True",
+                                                                                              "ReferenceClassName":  null
+                                                                                          },
+                                                                                          {
+                                                                                              "Name":  "instanceGuid",
+                                                                                              "Value":  null,
+                                                                                              "CimType":  14,
+                                                                                              "Flags":  "Property, Key, NullValue",
+                                                                                              "Qualifiers":  "key = True Not_Null = True",
+                                                                                              "ReferenceClassName":  null
+                                                                                          },
+                                                                                          {
+                                                                                              "Name":  "pathToSignedProductExe",
+                                                                                              "Value":  null,
+                                                                                              "CimType":  14,
+                                                                                              "Flags":  "Property, NullValue",
+                                                                                              "Qualifiers":  "Not_Null = True",
+                                                                                              "ReferenceClassName":  null
+                                                                                          },
+                                                                                          {
+                                                                                              "Name":  "pathToSignedReportingExe",
+                                                                                              "Value":  null,
+                                                                                              "CimType":  14,
+                                                                                              "Flags":  "Property, NullValue",
+                                                                                              "Qualifiers":  "Not_Null = True",
+                                                                                              "ReferenceClassName":  null
+                                                                                          },
+                                                                                          {
+                                                                                              "Name":  "productState",
+                                                                                              "Value":  null,
+                                                                                              "CimType":  6,
+                                                                                              "Flags":  "Property, NullValue",
+                                                                                              "Qualifiers":  "Not_Null = True",
+                                                                                              "ReferenceClassName":  null
+                                                                                          },
+                                                                                          {
+                                                                                              "Name":  "timestamp",
+                                                                                              "Value":  null,
+                                                                                              "CimType":  14,
+                                                                                              "Flags":  "Property, NullValue",
+                                                                                              "Qualifiers":  "",
+                                                                                              "ReferenceClassName":  null
+                                                                                          }
+                                                                                      ],
+                                                               "CimClassQualifiers":  [
+
+                                                                                      ],
+                                                               "CimClassMethods":  [
+
+                                                                                   ],
+                                                               "CimSystemProperties":  {
+                                                                                           "Namespace":  "ROOT/SecurityCenter2",
+                                                                                           "ServerName":  "LAPTOP",
+                                                                                           "ClassName":  "AntiVirusProduct",
+                                                                                           "Path":  null
+                                                                                       }
+                                                           },
+                                              "CimInstanceProperties":  [
+                                                                            {
+                                                                                "Name":  "displayName",
+                                                                                "Value":  "Windows Defender",
+                                                                                "CimType":  14,
+                                                                                "Flags":  "Property, NotModified",
+                                                                                "IsValueModified":  false
+                                                                            },
+                                                                            {
+                                                                                "Name":  "instanceGuid",
+                                                                                "Value":  "{D68DDC3A-831F-4fae-9E44-DA132C1ACF46}",
+                                                                                "CimType":  14,
+                                                                                "Flags":  "Property, Key, NotModified",
+                                                                                "IsValueModified":  false
+                                                                            },
+                                                                            {
+                                                                                "Name":  "pathToSignedProductExe",
+                                                                                "Value":  "windowsdefender://",
+                                                                                "CimType":  14,
+                                                                                "Flags":  "Property, NotModified",
+                                                                                "IsValueModified":  false
+                                                                            },
+                                                                            {
+                                                                                "Name":  "pathToSignedReportingExe",
+                                                                                "Value":  "%ProgramFiles%\\Windows Defender\\MsMpeng.exe",
+                                                                                "CimType":  14,
+                                                                                "Flags":  "Property, NotModified",
+                                                                                "IsValueModified":  false
+                                                                            },
+                                                                            {
+                                                                                "Name":  "productState",
+                                                                                "Value":  397568,
+                                                                                "CimType":  6,
+                                                                                "Flags":  "Property, NotModified",
+                                                                                "IsValueModified":  false
+                                                                            },
+                                                                            {
+                                                                                "Name":  "timestamp",
+                                                                                "Value":  "Fri, 21 Feb 2025 12:04:43 GMT",
+                                                                                "CimType":  14,
+                                                                                "Flags":  "Property, NotModified",
+                                                                                "IsValueModified":  false
+                                                                            }
+                                                                        ],
+                                              "CimSystemProperties":  {
+                                                                          "Namespace":  "ROOT/SecurityCenter2",
+                                                                          "ServerName":  "LAPTOP",
+                                                                          "ClassName":  "AntiVirusProduct",
+                                                                          "Path":  null
+                                                                      },
+                                              "displayName":  "Windows Defender",
+                                              "instanceGuid":  "{D68DDC3A-831F-4fae-9E44-DA132C1ACF46}",
+                                              "pathToSignedProductExe":  "windowsdefender://",
+                                              "pathToSignedReportingExe":  "%ProgramFiles%\\Windows Defender\\MsMpeng.exe",
+                                              "productState":  397568,
+                                              "timestamp":  "Fri, 21 Feb 2025 12:04:43 GMT",
+                                              "PSComputerName":  null
+                                          }
+                 },
+    "Software":  {
+                     "PowerShell":  "5.1.26100.2161",
+                     "NotionPath":  "C:\\Users\\Kyle\\AppData\\Local\\Programs\\Notion\\Notion.exe",
+                     "Chrome":  "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+                 },
+    "System":  {
+                   "CPU":  "Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz",
+                   "RAM":  16,
+                   "OS":  "Microsoft Windows 11 Pro",
+                   "Version":  "10.0.26100.0"
+               }
+}
+

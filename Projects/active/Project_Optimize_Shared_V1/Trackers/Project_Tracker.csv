@@ -1,0 +1,8 @@
+﻿Project,Status,Priority,Last Updated,Notes
+Security & Hardening,Planned,High,,Enhance firewall, block telemetry, enforce security policies
+Performance Tweaks,Planned,High,,Disable bloat, optimize CPU & RAM, clear junk files
+Automation & Scripting,Planned,Medium,,Task scheduling, AI-driven workflows, auto-backups
+DevOps & Workflows,Planned,Medium,,VS Code setup, GitHub automation, Docker optimizations
+File Organization & Cleanup,Planned,Low,,Auto-file sorting, deduplication, metadata tagging
+1Password CLI Setup,Completed,High,,Installed & Configured 1Password CLI
+

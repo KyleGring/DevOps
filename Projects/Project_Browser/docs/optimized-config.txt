@@ -1,0 +1,96 @@
+﻿# Optimized Configuration Script for Intel i5 16GB System
+
+# Performance Optimizations
+$perfSettings = @{
+    ChromeFlags = @{
+        MemoryModel = "16GB"
+        RenderingThreads = 4  # Based on i5-8265U
+        GpuRasterization = $true
+        HardwareAcceleration = $true
+    }
+    WindowsSettings = @{
+        PowerPlan = "High performance"
+        PageFile = "16384"  # Matching RAM
+        NetworkOptimization = $true
+    }
+}
+
+# Security Configuration
+$securitySettings = @{
+    FirewallProfiles = @{
+        Private = $true  # Enable private network firewall
+    }
+    DefenderSettings = @{
+        RealTimeProtection = $true
+        CloudProtection = $true
+        ControlledFolderAccess = $true
+    }
+}
+
+# Network Optimization for 866.7 Mbps Wi-Fi
+function Set-NetworkOptimization {
+    Set-NetTCPSetting -SettingName InternetCustom -AutoTuningLevelLocal Normal
+    Set-NetTCPSetting -SettingName InternetCustom -ScalingHeuristics Disabled
+    netsh int tcp set global autotuninglevel=normal
+    netsh int tcp set global chimney=disabled
+    netsh int tcp set global rss=enabled
+}
+
+# Chrome Optimization
+function Set-ChromeOptimization {
+    $chromePrefs = @{
+        hardware_acceleration_mode = @{
+            enabled = $true
+        }
+        memory = @{
+            purge_timer = 60  # Memory purge every 60s
+            budget = 1024  # MB for inactive tabs
+        }
+    }
+    
+    $prefsPath = "$env:LOCALAPPDATA\Google\Chrome\User Data\Default\Preferences"
+    $chromePrefs | ConvertTo-Json -Depth 10 | Set-Content $prefsPath -Force
+}
+
+# Notion Integration
+function Set-NotionIntegration {
+    $notionPath = "C:\Users\Kyle\AppData\Local\Programs\Notion\Notion.exe"
+    if (Test-Path $notionPath) {
+        # Create shortcut in startup
+        $startupFolder = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup"
+        $shortcutPath = "$startupFolder\Notion.lnk"
+        $shell = New-Object -ComObject WScript.Shell
+        $shortcut = $shell.CreateShortcut($shortcutPath)
+        $shortcut.TargetPath = $notionPath
+        $shortcut.Save()
+    }
+}
+
+# Auto-elevate to admin
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    try {
+        $argList = "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`""
+        Start-Process PowerShell -Verb RunAs -ArgumentList $argList
+        exit
+    }
+    catch {
+        Write-Warning "Failed to elevate permissions. Error: $_"
+        exit 1
+    }
+}
+
+# Main execution
+function Initialize-OptimizedEnvironment {
+    Set-NetworkOptimization
+    Set-ChromeOptimization
+    Set-NotionIntegration
+    
+    # Set power plan
+    powercfg /setactive scheme_min
+    
+    # Configure Windows for development
+    Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+    Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
+}
+
+Export-ModuleMember -Function Initialize-OptimizedEnvironment

@@ -1,0 +1,11 @@
+﻿
+===== Applying Windows Defender & Privacy Fixes =====
+
+[ Hardening Windows Defender ]
+
+[ Disabling Telemetry ]
+
+[ Disabling Remote Assistance & Remote Desktop ]
+
+[ Disabling Cortana ]
+

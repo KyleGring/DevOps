@@ -1,0 +1,80 @@
+﻿import os
+import shutil
+
+def create_folders(base_path, folder_structure):
+    """Creates folders based on the given structure and assigns icons."""
+    icon_mapping = {
+        "projects": "C:\\Windows\\System32\\shell32.dll,1",
+        "tools": "C:\\Windows\\System32\\shell32.dll,2",
+        "environments": "C:\\Windows\\System32\\shell32.dll,3",
+        "logs": "C:\\Windows\\System32\\shell32.dll,4",
+        "backups": "C:\\Windows\\System32\\shell32.dll,5",
+        "documentation": "C:\\Windows\\System32\\shell32.dll,6"
+    }
+    
+    for folder in folder_structure:
+        folder_path = os.path.join(base_path, folder)
+        os.makedirs(folder_path, exist_ok=True)
+        
+        # Create a README file for each folder
+        readme_path = os.path.join(folder_path, "README.md")
+        if not os.path.exists(readme_path):
+            with open(readme_path, "w") as f:
+                f.write(f"# {folder}\n\nThis directory is used for {folder.replace('_', ' ').title()}.")
+        
+        # Assign folder icon if applicable
+        parent_folder = folder.split("\\")[0]  # Get the primary folder
+        if parent_folder in icon_mapping:
+            desktop_ini_path = os.path.join(folder_path, "desktop.ini")
+            with open(desktop_ini_path, "w") as ini:
+                ini.write(f"[.ShellClassInfo]\nIconResource={icon_mapping[parent_folder]}\n[ViewState]\nMode=\nVid=\nFolderType=Generic")
+            os.system(f"attrib +h +s \"{desktop_ini_path}\"")
+            os.system(f"attrib +s \"{folder_path}\"")  # Set folder as a system folder
+
+def refresh_explorer():
+    """Refresh Windows Explorer to apply icon changes."""
+    os.system("taskkill /F /IM explorer.exe & start explorer.exe")
+
+def main():
+    base_path = "C:\\DevOps"
+    
+    # Define the DevOps directory structure
+    folder_structure = [
+        "projects",
+        "projects\\active",
+        "projects\\archived",
+        "projects\\templates",
+        "tools",
+        "tools\\scripts",
+        "tools\\binaries",
+        "tools\\configs",
+        "environments",
+        "environments\\python",
+        "environments\\node",
+        "environments\\docker",
+        "environments\\terraform",
+        "logs",
+        "logs\\system",
+        "logs\\application",
+        "logs\\automation",
+        "backups",
+        "backups\\daily",
+        "backups\\weekly",
+        "backups\\monthly",
+        "documentation",
+        "documentation\\best-practices",
+        "documentation\\project-docs",
+        "documentation\\tools-docs"
+    ]
+    
+    # Create the directory structure
+    create_folders(base_path, folder_structure)
+    
+    # Refresh Windows Explorer to apply icon changes
+    refresh_explorer()
+    
+    print(f"DevOps folder structure created successfully at {base_path}.")
+    
+if __name__ == "__main__":
+    main()
+

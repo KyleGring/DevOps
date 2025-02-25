@@ -1,0 +1,9 @@
+﻿Project,Status,Priority,Last Updated,Notes
+Security & Hardening,In Progress,High,,Merged validation & fixes into Secure_Windows.ps1
+Performance Tweaks,Completed,High,,Optimized Windows & removed bloatware
+Automation & Scripting,Planned,Medium,,Task scheduling, AI-driven workflows, auto-backups
+DevOps & Workflows,Planned,Medium,,VS Code setup, GitHub automation, Docker optimizations
+File Organization & Cleanup,Planned,Low,,Auto-file sorting, deduplication, metadata tagging
+Network Optimization,In Progress,High,,Merged into Auto_Restore_Network, Optimize_WiFi, Optimize_Firewall
+Security Monitoring,Standalone,Medium,,Keeps automated daily security validation
+

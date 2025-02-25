@@ -1,0 +1,29 @@
+﻿!define APPNAME "Windows Privacy Optimizer"
+!define APPVERSION "1.0"
+!define EXEDIR "$INSTDIR\EXE"
+
+Outfile "WindowsPrivacyOptimizer_Setup.exe"
+InstallDir "$PROGRAMFILES\WindowsPrivacyOptimizer"
+
+Section "Install"
+    SetOutPath "$INSTDIR\EXE"
+    File "EXE\Apply_Fixes.exe"
+    File "EXE\Validate_Fixes.exe"
+    File "EXE\Setup_ScheduledTask.exe"
+
+    WriteRegStr HKLM "Software\WindowsPrivacyOptimizer" "InstallDir" "$INSTDIR"
+
+    Exec "$INSTDIR\EXE\Setup_ScheduledTask.exe"
+SectionEnd
+
+Section "Uninstall"
+    Delete "$EXEDIR\Apply_Fixes.exe"
+    Delete "$EXEDIR\Validate_Fixes.exe"
+    Delete "$EXEDIR\Setup_ScheduledTask.exe"
+    RMDir /r "$EXEDIR"
+
+    DeleteRegKey HKLM "Software\WindowsPrivacyOptimizer"
+SectionEnd
+
+SectionEnd
+

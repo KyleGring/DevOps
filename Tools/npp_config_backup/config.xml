@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<NotepadPlus>
+    <GUIConfig name="DarkMode" enable="yes"/>
+    <GUIConfig name="SessionPersistence" enable="yes"/>
+    <GUIConfig name="AutoSave" enable="yes" interval="5000"/>
+    <GUIConfig name="RememberLastSession" enable="yes"/>
+    <GUIConfig name="Minimized" enable="no"/>
+    <GUIConfig name="Language" format="English"/>
+    <GUIConfig name="TabBar">
+        <MultiLine enable="yes"/>
+    </GUIConfig>
+    <GUIConfig name="ScintillaPrimaryView">
+        <Option name="Line number margin" value="1"/>
+        <Option name="Bookmark margin" value="1"/>
+        <Option name="Code folding" value="1"/>
+        <Option name="Vertical Edge" value="1"/>
+        <Option name="Word wrap" value="0"/>
+        <Option name="Current line highlighting" value="1"/>
+        <Option name="Auto-indent" value="1"/>
+        <Option name="Tab size" value="4"/>
+        <Option name="Vertical Edge Column" value="80"/>
+    </GUIConfig>
+    <GUIConfig name="Backup" enable="yes" useCustumDir="yes" dir="%APPDATA%\Notepad++\backup" />
+    <GUIConfig name="autoCompletition" autoCAction="3" triggerFromNbChar="1" funcParams="yes" />
+</NotepadPlus>

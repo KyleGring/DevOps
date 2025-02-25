@@ -1,0 +1,8 @@
+﻿<NotepadPlus>
+    <InternalCommands>
+        <Shortcut id="42022" Ctrl="yes" Alt="no" Shift="yes" Key="191" /><!-- Comment -->
+        <Shortcut id="42023" Ctrl="yes" Alt="no" Shift="yes" Key="193" /><!-- Uncomment -->
+        <Shortcut id="43014" Ctrl="yes" Alt="no" Shift="no" Key="68" /><!-- Duplicate Line -->
+        <Shortcut id="43006" Ctrl="yes" Alt="no" Shift="no" Key="76" /><!-- Delete Line -->
+    </InternalCommands>
+</NotepadPlus>

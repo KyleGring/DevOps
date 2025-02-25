@@ -1,0 +1,26 @@
+﻿# System Files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Temporary Files
+*.log
+*.tmp
+temp/
+logs/
+
+# Build Output
+bin/
+obj/
+dist/
+build/
+
+# Dependencies
+node_modules/
+packages/
+

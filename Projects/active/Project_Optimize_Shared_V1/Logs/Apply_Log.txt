@@ -1,0 +1,15 @@
+﻿
+===== Applying Windows Defender & Privacy Fixes (Enforced) =====
+
+[ Hardening Windows Defender ]
+
+[ Disabling Tamper Protection ]
+
+[ Disabling Telemetry (Forced) ]
+
+[ Disabling Remote Assistance & Remote Desktop ]
+
+[ Disabling Cortana (Forced) ]
+
+[ Enabling Windows Firewall ]
+

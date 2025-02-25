@@ -1,0 +1,26 @@
+﻿{
+    "Network":  {
+                    "Name":  "Wi-Fi",
+                    "Speed":  "650 Mbps",
+                    "Type":  "Intel(R) Wireless-AC 9560 160MHz"
+                },
+    "Drive":  {
+                  "FreeSpace":  380,
+                  "Name":  "G",
+                  "UsedSpace":  97
+              },
+    "System":  {
+                   "Build":  "26100",
+                   "Version":  "10.0.26100",
+                   "CPU":  "Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz",
+                   "RAM":  "16 GB",
+                   "Model":  "20QD001UUS",
+                   "Manufacturer":  "LENOVO",
+                   "OS":  "Microsoft Windows 11 Pro"
+               },
+    "Chrome":  {
+                   "Version":  "133.0.6943.127",
+                   "LastUpdate":  null
+               }
+}
+

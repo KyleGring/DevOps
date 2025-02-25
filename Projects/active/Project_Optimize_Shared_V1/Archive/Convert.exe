@@ -1,0 +1,9 @@
+﻿# Convert Scripts to EXE
+if (!(Test-Path .\EXE)) { New-Item -ItemType Directory -Path .\EXE }
+
+Invoke-Expression "ps2exe .\Apply_Fixes.ps1 .\EXE\Apply_Fixes.exe"
+Invoke-Expression "ps2exe .\Validate_Fixes.ps1 .\EXE\Validate_Fixes.exe"
+Invoke-Expression "ps2exe .\Setup_ScheduledTask.ps1 .\EXE\Setup_ScheduledTask.exe"
+
+Write-Output "Conversion complete! EXE files saved in EXE folder."
+
